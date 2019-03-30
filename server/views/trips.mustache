@@ -1,0 +1,33 @@
+<html>
+<head></head>
+
+
+<body>
+
+  <h3>Trips</h3>
+
+<!-- starting of the loop -->
+  {{#tripList}}
+
+    <div>{{title}}</div>
+    <img src='{{imageName}}' width="200" height="200" />
+    <div>Departure: {{dateDepart}}</div>
+    <div>Return: {{dateReturn}}</div>
+
+<!-- creating forms so we can submit tripId for deletion -->
+  <form action='/deleteTrip' method='post'>
+    <input type="hidden" name="tripId" value='{{tripId}}' />
+    <input type="submit" value="Delete" />
+  </form>
+
+  {{/tripList}}
+
+  <a href="/add-trip">Enter New Trip</a>
+
+  <form action='/logout' method='post'>
+    <input type='submit' value='Logout'/>
+  </form>
+
+
+</body>
+</html>

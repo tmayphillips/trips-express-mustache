@@ -1,0 +1,25 @@
+<html>
+<head></head>
+
+
+<body>
+
+  <button><a href="/register">Register</a></button>
+  <button><a href="/login">Login</a></button>
+  <form action='/logout' method='post'>
+    <input type='submit' value='Logout'/>
+  </form>
+
+  <h1>Trips</h1>
+  <ul>
+    {{#tripList}}
+    <li>
+      <img src='{{image}}' height="200px" width="auto"/>
+      <span>{{title}} - {{image}} - {{dateDepart}} - {{dateReturn}}</span>
+      <button id="deleteTrip">Delete</button>
+    </li>
+    {{/tripList}}
+  </ul>
+
+</body>
+</html>
