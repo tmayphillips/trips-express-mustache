@@ -3,14 +3,22 @@
 <body>
 
   <form action="/add-trip" method="POST" enctype="multipart/form-data">
-   <label for="title">Trip Name</lablel>
-   <input type="text" name="title" placeholder="Trip Name" />
+   <div>
+     <label for="title">Trip Name</lablel>
+       <input type="text" name="title" placeholder="Trip Name" />
+  </div>
+  <div>
    <label for="image">Choose a Picture</label>
    <input type="file" name="image" />
+ </div>
+ <div>
    <label for="dateDepart">Departure Date</label>
    <input type="date" name="dateDepart" />
+ </div>
+ <div>
    <label for="dateReturn">Return Date</label>
    <input type="date" name="dateReturn" />
+ </div>
    <button type="submit">Save</button>
   </form>
 
